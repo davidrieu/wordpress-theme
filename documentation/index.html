@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectPro Theme Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #3B82F6;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3B82F6;
+        }
+
+        main {
+            background: white;
+            margin: 40px 0;
+            padding: 60px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #3B82F6;
+            font-size: 32px;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3B82F6;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+            color: #e74c3c;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            main {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ConnectPro Theme</h1>
+            <p>Complete Documentation</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#setup">Setup</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#customization">Customization</a></li>
+                <li><a href="#shortcodes">Shortcodes</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h2 id="installation">Installation</h2>
+
+            <h3>Requirements</h3>
+            <ul>
+                <li>WordPress 6.0 or higher</li>
+                <li>PHP 7.4 or higher</li>
+                <li>MySQL 5.6 or higher</li>
+            </ul>
+
+            <h3>Installation Steps</h3>
+            <ol>
+                <li>Download the theme ZIP file</li>
+                <li>Go to <code>Appearance > Themes > Add New</code></li>
+                <li>Click <strong>Upload Theme</strong></li>
+                <li>Choose the ZIP file and click <strong>Install Now</strong></li>
+                <li>After installation, click <strong>Activate</strong></li>
+            </ol>
+
+            <div class="success-box">
+                <strong>Success!</strong> Your theme is now installed and activated.
+            </div>
+
+            <h2 id="setup">Initial Setup</h2>
+
+            <h3>1. Install Required Plugins</h3>
+            <p>After activation, you'll see a notice to install required plugins:</p>
+            <ul>
+                <li><strong>Elementor</strong> - Page builder (Required)</li>
+                <li><strong>WooCommerce</strong> - E-commerce platform (Required)</li>
+                <li><strong>Contact Form 7</strong> - Contact forms (Required)</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Tip:</strong> Click the notification banner to automatically install all required plugins.
+            </div>
+
+            <h3>2. Import Demo Content (Optional)</h3>
+            <ol>
+                <li>Install <strong>One Click Demo Import</strong> plugin</li>
+                <li>Go to <code>Appearance > Import Demo Data</code></li>
+                <li>Select <strong>ConnectPro Demo</strong></li>
+                <li>Click <strong>Import</strong> and wait for completion</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>Warning:</strong> Demo import may take several minutes. Do not close the browser during import.
+            </div>
+
+            <h3>3. Configure Permalinks</h3>
+            <ol>
+                <li>Go to <code>Settings > Permalinks</code></li>
+                <li>Select <strong>Post name</strong></li>
+                <li>Click <strong>Save Changes</strong></li>
+            </ol>
+
+            <h2 id="features">Theme Features</h2>
+
+            <h3>Custom Post Type: Listings</h3>
+            <p>The theme includes a powerful Listings post type for marketplace items.</p>
+
+            <h4>Creating a Listing</h4>
+            <ol>
+                <li>Go to <code>Listings > Add New</code></li>
+                <li>Enter listing title and description</li>
+                <li>Fill in listing details:
+                    <ul>
+                        <li>Type (Rent, Sale, Service, Event)</li>
+                        <li>Price and currency</li>
+                        <li>Location information</li>
+                        <li>Features and amenities</li>
+                        <li>Contact details</li>
+                    </ul>
+                </li>
+                <li>Add featured image</li>
+                <li>Assign categories and location</li>
+                <li>Click <strong>Publish</strong></li>
+            </ol>
+
+            <h3>User Dashboard</h3>
+            <p>Frontend dashboard allows users to:</p>
+            <ul>
+                <li>View dashboard overview</li>
+                <li>Manage their listings</li>
+                <li>Access favorites</li>
+                <li>View messages</li>
+                <li>Edit their profile</li>
+            </ul>
+
+            <p>To create a dashboard page:</p>
+            <ol>
+                <li>Create a new page</li>
+                <li>Add the shortcode: <code>[user_dashboard]</code></li>
+                <li>Publish the page</li>
+            </ol>
+
+            <h3>Search & Filters</h3>
+            <p>Add advanced search functionality with the search shortcode:</p>
+            <pre><code>[listing_search]</code></pre>
+
+            <p>The search form includes:</p>
+            <ul>
+                <li>Keyword search</li>
+                <li>Category filter</li>
+                <li>Location filter</li>
+                <li>Price range</li>
+                <li>AJAX live filtering</li>
+            </ul>
+
+            <h2 id="customization">Customization</h2>
+
+            <h3>Theme Customizer</h3>
+            <p>Access theme options via <code>Appearance > Customize</code></p>
+
+            <h4>Available Options:</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Section</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General Settings</td>
+                        <td>Logo width, site identity</td>
+                    </tr>
+                    <tr>
+                        <td>Color Settings</td>
+                        <td>Primary, secondary, accent colors</td>
+                    </tr>
+                    <tr>
+                        <td>Header Settings</td>
+                        <td>Header style, sticky header</td>
+                    </tr>
+                    <tr>
+                        <td>Footer Settings</td>
+                        <td>Copyright text, widgets</td>
+                    </tr>
+                    <tr>
+                        <td>Typography</td>
+                        <td>Font sizes, font families</td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>Social network URLs</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Menus</h3>
+            <p>The theme supports 4 menu locations:</p>
+            <ul>
+                <li><strong>Primary Menu</strong> - Main navigation</li>
+                <li><strong>Footer Menu</strong> - Footer links</li>
+                <li><strong>Mobile Menu</strong> - Mobile navigation</li>
+                <li><strong>User Dashboard Menu</strong> - Dashboard navigation</li>
+            </ul>
+
+            <h3>Widget Areas</h3>
+            <p>Available widget areas:</p>
+            <ul>
+                <li>Main Sidebar</li>
+                <li>Shop Sidebar</li>
+                <li>Footer Widget Area 1</li>
+                <li>Footer Widget Area 2</li>
+                <li>Footer Widget Area 3</li>
+                <li>Footer Widget Area 4</li>
+            </ul>
+
+            <h2 id="shortcodes">Shortcodes</h2>
+
+            <h3>Available Shortcodes</h3>
+
+            <h4>User Dashboard</h4>
+            <pre><code>[user_dashboard]</code></pre>
+            <p>Displays complete user dashboard with tabs for overview, listings, favorites, messages, and profile.</p>
+
+            <h4>Listing Search Form</h4>
+            <pre><code>[listing_search]</code></pre>
+            <p>Advanced search form with filters for category, location, and price.</p>
+
+            <h4>Favorites Page</h4>
+            <pre><code>[connectpro_favorites]</code></pre>
+            <p>Displays user's favorited listings.</p>
+
+            <h2 id="support">Support & Updates</h2>
+
+            <h3>Getting Support</h3>
+            <p>If you need help with the theme:</p>
+            <ol>
+                <li>Check this documentation first</li>
+                <li>Visit the FAQ section</li>
+                <li>Contact support with your purchase code</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Support Includes:</strong>
+                <ul>
+                    <li>Answering technical questions</li>
+                    <li>Assistance with theme features</li>
+                    <li>Bug fixes and updates</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <strong>Support Does NOT Include:</strong>
+                <ul>
+                    <li>Customization services</li>
+                    <li>Third-party plugin support</li>
+                    <li>Website building or content creation</li>
+                </ul>
+            </div>
+
+            <h3>Updates</h3>
+            <p>Theme updates are released regularly and include:</p>
+            <ul>
+                <li>New features</li>
+                <li>Bug fixes</li>
+                <li>Security patches</li>
+                <li>WordPress compatibility updates</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Stay Updated:</strong> Always backup your site before updating the theme.
+            </div>
+
+            <h2>Changelog</h2>
+            <h3>Version 1.0.0 (January 2025)</h3>
+            <ul>
+                <li>Initial release</li>
+                <li>Custom Listing post type</li>
+                <li>User dashboard</li>
+                <li>Favorites system</li>
+                <li>Advanced search and filtering</li>
+                <li>WooCommerce integration</li>
+                <li>Elementor support</li>
+                <li>Fully responsive design</li>
+            </ul>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ConnectPro Theme. All rights reserved.</p>
+            <p>Thank you for choosing ConnectPro!</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/**
+ * Elementor Frontend Styles
+ *
+ * @package ConnectPro
+ * @since 1.0.0
+ */
+
+.elementor-widget-connectpro-listings-grid .listings-grid {
+    margin-top: 0;
+}
+
+.elementor-widget-connectpro-listing-search .listing-search-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.elementor-widget-connectpro-listing-categories .category-card {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.elementor-widget-connectpro-listing-categories .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
