@@ -39,10 +39,14 @@ function connectpro_theme_setup() {
 
     // Register navigation menus
     register_nav_menus( array(
-        'primary'       => esc_html__( 'Primary Menu', 'connectpro' ),
-        'footer'        => esc_html__( 'Footer Menu', 'connectpro' ),
-        'mobile'        => esc_html__( 'Mobile Menu', 'connectpro' ),
-        'user-dashboard' => esc_html__( 'User Dashboard Menu', 'connectpro' ),
+        'primary'            => esc_html__( 'Primary Menu', 'connectpro' ),
+        'footer'             => esc_html__( 'Footer Menu', 'connectpro' ),
+        'mobile'             => esc_html__( 'Mobile Menu', 'connectpro' ),
+        'user-dashboard'     => esc_html__( 'User Dashboard Menu', 'connectpro' ),
+        'dashboard-main'     => esc_html__( 'Dashboard Main Navigation', 'connectpro' ),
+        'dashboard-listings' => esc_html__( 'Dashboard Listings Menu', 'connectpro' ),
+        'dashboard-account'  => esc_html__( 'Dashboard Account Menu', 'connectpro' ),
+        'split-header'       => esc_html__( 'Split Map Header Menu', 'connectpro' ),
     ) );
 
     // Switch default core markup to output valid HTML5
@@ -206,6 +210,9 @@ function connectpro_scripts() {
     // Main CSS
     wp_enqueue_style( 'connectpro-main', CONNECTPRO_THEME_URI . '/assets/css/main.css', array(), CONNECTPRO_VERSION );
 
+    // Template Styles
+    wp_enqueue_style( 'connectpro-templates', CONNECTPRO_THEME_URI . '/assets/css/templates.css', array(), CONNECTPRO_VERSION );
+
     // Responsive CSS
     wp_enqueue_style( 'connectpro-responsive', CONNECTPRO_THEME_URI . '/assets/css/responsive.css', array(), CONNECTPRO_VERSION );
 
@@ -286,6 +293,18 @@ require_once CONNECTPRO_INC_DIR . '/ajax-handlers.php';
 
 // Helper Functions
 require_once CONNECTPRO_INC_DIR . '/helpers.php';
+
+// Google Maps Integration
+require_once CONNECTPRO_INC_DIR . '/google-maps.php';
+
+// Dark Mode
+require_once CONNECTPRO_INC_DIR . '/dark-mode.php';
+
+// Booking System
+require_once CONNECTPRO_INC_DIR . '/bookings.php';
+
+// Review System
+require_once CONNECTPRO_INC_DIR . '/reviews.php';
 
 // Demo Content Importer
 require_once CONNECTPRO_INC_DIR . '/demo-importer.php';
